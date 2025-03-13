@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SetApp.MainWindow"
+        Title="Множество" Width="400" Height="300"
+        Background="#F0F0F0">
+
+    <StackPanel Margin="20">
+        <TextBlock Text="Элементы множества:" FontSize="20" FontWeight="Bold" Foreground="#333333"/>
+        
+        <TextBox Name="InputBox" Width="300" 
+                 Padding="10" FontSize="16" Background="#FFFFFF" 
+                 BorderBrush="#CCCCCC" BorderThickness="1"/>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5,0,10">
+            <Button Name="AddButton" Content="Добавить" Click="OnAddButtonClick" 
+                    Width="80" Margin="0,0,5,0" Background="#4CAF50" 
+                    Foreground="#FFFFFF" FontSize="16" 
+                    BorderBrush="#4CAF50" BorderThickness="1" 
+                    Focusable="False"/>
+            <Button Name="RemoveButton" Content="Удалить" Click="OnRemoveButtonClick" 
+                    Width="80" Margin="0,0,5,0" Background="#F44336" 
+                    Foreground="#FFFFFF" FontSize="16" 
+                    BorderBrush="#F44336" BorderThickness="1" 
+                    Focusable="False"/>
+            <Button Name="ClearButton" Content="Очистить" Click="OnClearButtonClick" 
+                    Width="80" Background="#2196F3" Foreground="#FFFFFF" 
+                    FontSize="16" BorderBrush="#2196F3" BorderThickness="1"
+                    Focusable="False"/>
+        </StackPanel>
+        
+        <TextBlock Text="Текущее множество:" FontSize="20" FontWeight="Bold"  Foreground="#000000" Margin="0,20,0,5"/>
+        <TextBlock Name="SetContent" FontSize="16" Foreground="#000000"/>
+    </StackPanel>
+</Window>
